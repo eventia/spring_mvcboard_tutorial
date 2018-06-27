@@ -1,0 +1,7 @@
+/.metadata
+/.gradle
+/RemoteSystemsTempFiles
+/.recommenders
+/Servers
+*.class
+auto.bat
