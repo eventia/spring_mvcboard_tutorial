@@ -1,22 +1,20 @@
-DROP TABLE mvc_board;
-CREATE table mvc_board(
-    bId NUMBER(4) PRIMARY KEY,
-    bName VARCHAR2(20),
-    bTitle VARCHAR2(100),
-    bContent VARCHAR2(300),
-    bDate DATE DEFAULT SYSDATE,
-    bHit NUMBER(4) DEFAULT 0,
-    bGroup NUMBER(4),
-    bStep NUMBER(4),
-    bIndent NUMBER(4)
-    );
+DROP TABLE IF EXISTS member;
+CREATE table `member`(
+    `user_id` VARCHAR(45) NOT NULL,
+    `user_pw` VARCHAR(45) NULL,
+    `user_name` VARCHAR(45) NULL,
+    `user_email` VARCHAR(45) NULL,
+	primary key (user_id)
+) engine=InnoDB character set = utf8;
     
-DROP SEQUENCE mvc_board_seq;
-CREATE SEQUENCE mvc_board_seq;
 
-INSERT INTO mvc_board (bId, bName, bTitle, bContent, bHit, bGroup, bStep, bIndent) 
-  values (mvc_board_seq.nextval, 'abcd', 'is title', 'is content', 0, mvc_board_seq.currval, 0, 0);
-INSERT INTO mvc_board (bId, bName, bTitle, bContent, bHit, bGroup, bStep, bIndent) 
-  values (mvc_board_seq.nextval, 'joy', 'Happy man', '그는 항상 행복합니다.', 0, mvc_board_seq.currval, 0, 0);
+INSERT INTO member (user_id, user_pw, user_name, user_email) values ('A001', '1111', 'KIM', 'kim@abc.com');
+INSERT INTO member (user_id, user_pw, user_name, user_email) values ('A002', '1111', 'LEE', 'lee@abc.com');
+INSERT INTO member (user_id, user_pw, user_name, user_email) values ('A003', '1111', 'BAE', 'bae@abc.com');
+INSERT INTO member (user_id, user_pw, user_name, user_email) values ('B001', '1111', 'ȫ�浿', 'hong@abc.com');
+INSERT INTO member (user_id, user_pw, user_name, user_email) values ('B002', '1111', '����', 'gana@abc.com');
+
+
+SELECT * FROM test1.member;
 
 
