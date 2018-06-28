@@ -18,9 +18,9 @@ public class TestDAO {
 	@RequestMapping(value="/testDAO", method=RequestMethod.GET)
 	public void testDAO(){
         MemberVO vo = new MemberVO();
-        vo.setUser_id("studyid");
-        vo.setUser_pw("studypw");
-        vo.setUser_email("studyid@dtudy.com");
+        vo.setUser_id("T010");
+        vo.setUser_pw("1234");
+        vo.setUser_email("t010@dtudy.com");
         
         dao.insertMember(vo);
     }
