@@ -4,7 +4,7 @@
 	
 2. DBTest
 	2.1. JUnit Test Case
-	
+		springframework-version -> 3.1.1. or 4.1.1
 
 
 
